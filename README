@@ -1,0 +1,8 @@
+SERVER EXAMPLE
+==============
+nohup ./logshard_server.py -a accesslogs/lookup -l ~/lookup_data -w whitelist 50101 &
+
+
+CLIENT EXAMPLE
+==============
+nohup logshard_client.py -e error.log -i30 -t5 -c '~/logshards/jobs/getkey.sh %s' SERVER_IP 50101 &
